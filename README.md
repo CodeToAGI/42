@@ -20,3 +20,17 @@ Neither is ever told what a good image looks like.
 - Full PyTorch DCGAN on MNIST
 
 ## Key formulas
+
+D loss  = BCE(D(real), 1) + BCE(D(G(z)), 0)
+G loss  = BCE(D(G(z)), 1)          # non-saturating
+text## Challenge
+
+```bash
+pip install torch torchvision matplotlib
+python ep42_dcgan_mnist.py
+
+Train ≥ 50 epochs
+Save a 64-image grid every 5 epochs
+Watch the grids improve
+Try triggering mode collapse by raising the Discriminator learning rate 10×
+Post your best grid + mode-collapse observation
